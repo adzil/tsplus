@@ -99,8 +99,10 @@ npm start
 If you want to run the project with in-memory compiler, use
 
 ```
-npm run project
+npm run app
 ```
+
+> The syntax has been changed from `npm run project`.
 
 ## Development Hot Reload
 
