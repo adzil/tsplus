@@ -9,6 +9,7 @@ integration, and coverage for Node.JS.
 - Full-fledged TypeScript project with dev hot reloading support
 - Suitable for standalone or package projects
 - Interoperability with CommonJS modules
+- Instant debug configuration with VSCode
 - Complete test suite with Mocha and Chai with Promise
 - Code coverage embedded in `npm test`
 - Travis-CI and Coveralls support
@@ -68,7 +69,7 @@ git pull
 npm install --only=prod
 
 # Compile the code
-npm run compile
+npm run build
 
 # Run the code
 npm start
@@ -82,19 +83,21 @@ Don't add `typescript` dependencies if you plan to upload this project to
 NpmJS.com. The `npm publish` will automatically compile your project before
 publishing it.
 
-## Basic Compile and Run
+## Basic Build and Run
 
-You can also run standalone app by compile the project first.
+You can also run standalone app by building the project first.
 
 ```sh
-# Compile the project
-npm run compile
+# Build the project
+npm run build
 
 # And then let's run the project
 npm start
 ```
 
-### Run Without Compile
+> The syntax has been changed from `npm run compile`.
+
+### Run Without Building
 
 If you want to run the project with in-memory compiler, use
 
@@ -113,7 +116,7 @@ npm run dev
 ```
 
 This command will do in-memory compilation so if you planning on run the app
-with `npm start` later, please compile it first using `npm run compile`.
+with `npm start` later, please build it first using `npm run build`.
 
 Please **DO NOT** use this command for production. You can use process manager
 such as PM2 to manage your production code.
@@ -126,6 +129,11 @@ by adding `nodemon.json` in the root project directory with this configuration
   "restartable": false
 }
 ```
+
+## Debugging with VSCode
+
+You can run the debugger by selecting `Launch Program` at Debug Panel and click
+the start button. VSCode will automatically compile and debug your program.
 
 ## CommonJS Default Exports
 

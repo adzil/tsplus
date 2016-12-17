@@ -1,6 +1,6 @@
 {
   "name": "tsplus",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "TypeScript project boilerplate with complete test suite, continuous integration, and coverage for Node.JS",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -8,7 +8,7 @@
     "prepublish": "tsc",
     "test": "nyc mocha -r ts-node/register test/**/*.spec.ts",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "compile": "tsc",
+    "build": "tsc",
     "start": "node dist/index.js",
     "app": "ts-node src/index.ts",
     "dev": "nodemon --watch \"src/**/*.ts\" --exec \"ts-node\" src/index.ts"
